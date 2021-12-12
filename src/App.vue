@@ -1,13 +1,13 @@
 <template>
 <div class="app">
   <div class="title">
-    <h2>Ango</h2>
+    <h2 class="mainTitle">Ango</h2>
+    <p class="subTitle">※現在、アルファベットの小文字と一部記号にのみ対応しています。</p>
   </div>
-  <p>-- {{menu[count].name}}モード --</p>
+  <p class="modeName">-- {{menu[count].name}}モード --</p>
+  <button class="changeModeButton" @click="changeMode">モード切替</button>
   <textarea v-model="inputS"></textarea>
   <button class="EXButton" @click="pushButton">{{menu[count].name}}</button>
-  <p>{{inputS}}</p>
-  <button @click="changeMode">モード切替</button>
 </div>
 
 </template>
@@ -115,12 +115,47 @@ export default {
 </script>
 
 <style>
+html{
+  background-color:black;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #00c02a9f;
   margin-top: 60px;
+}
+
+.mainTitle{
+  font-size:50px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+.subTitle{
+  font-size:5px;
+}
+
+.changeModeButton{
+  display:inline;
+  margin-bottom:30px;
+  color:#00c02a9f;
+  background-color:black;
+}
+
+.EXButton{
+  margin-top:15px;
+  color:#00c02a9f;
+  background-color:black;
+}
+
+textarea{
+  display:block;
+  margin:0 auto;
+  color:#00c02a9f;
+  background-color:black;
+  width:300px;
+  height:200px;
 }
 </style>
