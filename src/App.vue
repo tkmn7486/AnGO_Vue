@@ -1,7 +1,7 @@
 <template>
 <div class="app">
   <div class="title">
-    <h2 class="mainTitle">Ango</h2>
+    <h2 class="mainTitle">AnGO</h2>
     <p class="subTitle">※現在、アルファベットの小文字と一部記号にのみ対応しています。</p>
   </div>
   <p class="modeName">-- {{menu[count].name}}モード --</p>
